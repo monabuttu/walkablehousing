@@ -36,6 +36,9 @@ class Schema(ma.ModelSchema):
     class Meta:
         model = Real_estate
 
+def isnumber(s):
+   return s is not None and s.isdigit()
+
 
 #landing page that will display all the postings in our database
 #This function operate on the Read operation.
@@ -64,13 +67,13 @@ def results():
 
    postings = Real_estate.query
 
-   if minprice != None and minprice != "":
+   if isnumber(minprice):
       postings = postings.filter(Real_estate.Price >= minprice)
    
-   if maxprice != None and maxprice != "":
+   if isnumber(maxprice):
       postings = postings.filter(Real_estate.Price <= maxprice)
       
-   if wScore != None and wScore != "":
+   if isnumber(wScore):
       postings = postings.filter(Real_estate.Walk_Score >= wScore)
    
    postings = postings.all()
