@@ -1,1 +1,1 @@
-web: gunicorn toronto_real_estate.app:app.py
+web: gunicorn toronto_real_estate.app:app
