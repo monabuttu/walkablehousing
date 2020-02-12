@@ -24,7 +24,7 @@ body {
   html {
     height: 100%;
   }
-  .leaflet-popup-content {
+  /* .leaflet-popup-content {
     max-width: auto;
     height: auto;
     overflow-y: scroll;
@@ -33,7 +33,7 @@ body {
     line-height: normal;
     background:black;
     font-weight: lighter;
-}
+} */
 /* .custom-popup .leaflet-popup-tip {
   border-left:15px solid transparent;
   border-right:15px solid transparent;
